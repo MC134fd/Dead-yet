@@ -1,0 +1,568 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1016353A9DE89D4F1801ED05 /* StreakCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BBFF7617C8A6F353D7ACC2 /* StreakCalculator.swift */; };
+		137192D2631A9DEC4AC8182D /* CountdownDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE6694A708C97A22A40F711 /* CountdownDisplay.swift */; };
+		19C54044A115A777647213F9 /* HistoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F4ADDCB6B8A9DC42BC62C8 /* HistoryRow.swift */; };
+		1A235C41452786D9669AC380 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071148BE11BD3191BF891EA0 /* HistoryView.swift */; };
+		1DC5F673AC1FC27A83E14048 /* CheckInEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9896945ED27DADC572E501DB /* CheckInEngineTests.swift */; };
+		1DD894E6DDB0594C5EE42DB8 /* BackendSyncProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC60E1ACDDAA308C11D64923 /* BackendSyncProtocol.swift */; };
+		276BB1479D70122C4B80CA63 /* EmergencyContactTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981E07FB4FB2F6A8707D9938 /* EmergencyContactTests.swift */; };
+		2D8B34AE6740F48F92975785 /* StreakCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5176C0C1D0840896E40495DC /* StreakCalculatorTests.swift */; };
+		2E6D2B5CAFB1D5D397401BA0 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F487180DA096074324EBC1 /* UserSettings.swift */; };
+		48340B620D782D4A72E1BD71 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00657DE8292FDAE53EE7B52B /* HomeViewModel.swift */; };
+		5B469B45924FAABE08678A60 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0331A7D5B9F2E1703DEA8083 /* HomeView.swift */; };
+		6125B872F6F66B4706F1CF55 /* CheckInEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34666AF9B77981AB47F3F351 /* CheckInEngine.swift */; };
+		66B081916938F8624246A4B7 /* AliveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790EFEF49AC0A8FF4AB06195 /* AliveButton.swift */; };
+		7E3252BEBA9D7DF056210CFB /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53E7901B1AD671B3E90FC2F /* SettingsView.swift */; };
+		7E58E48774C70A63BC66113F /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C72151E72FD6A12934DE20 /* NotificationService.swift */; };
+		82DF69BEA5FB35190B932DDE /* DeadYetStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D1C68F15E9BE091E54477 /* DeadYetStyle.swift */; };
+		8614D06C43C0119884C680A5 /* GracePeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA95E0128FC88CC8A387800E /* GracePeriod.swift */; };
+		8EE15301AF6D857987F4CED9 /* DeadYetFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDBE4DAF322F03AE988252A /* DeadYetFonts.swift */; };
+		961F9784CDC08A6E433F9218 /* SetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7090DD33DBA1A95013003759 /* SetupView.swift */; };
+		BF723204AC5C39625ADDB794 /* CheckInRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67AA942CD218D3B95B064CF /* CheckInRecord.swift */; };
+		D38B075F766157C9296FB404 /* DeadYetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A54057BBA822DD5950F000D /* DeadYetApp.swift */; };
+		DA9C3613DD7E2B6792097E54 /* DeadYetColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9ADFD22A2C300D928A167FC /* DeadYetColors.swift */; };
+		DC4079FE3C94AFEF9EDE5A17 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1FE394955C34CC5BD60C49 /* AppState.swift */; };
+		DFD21A55301D1A6F7607B696 /* EmergencyContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA4E26C5182F2B4420EBDCB /* EmergencyContact.swift */; };
+		E3C345C0F8665DAE30493E83 /* StatusBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561F947824102C9D27446284 /* StatusBanner.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1E84B5BF26FFE992D7468967 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 916BFAB15AC346BDCE7F190A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 901AD0003F5463D01783AF6E;
+			remoteInfo = DeadYet;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00657DE8292FDAE53EE7B52B /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		0331A7D5B9F2E1703DEA8083 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		03F487180DA096074324EBC1 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		040D1C68F15E9BE091E54477 /* DeadYetStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeadYetStyle.swift; sourceTree = "<group>"; };
+		071148BE11BD3191BF891EA0 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		097C614529EE6C33550F943E /* DeadYet.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = DeadYet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A54057BBA822DD5950F000D /* DeadYetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeadYetApp.swift; sourceTree = "<group>"; };
+		34666AF9B77981AB47F3F351 /* CheckInEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInEngine.swift; sourceTree = "<group>"; };
+		46F4ADDCB6B8A9DC42BC62C8 /* HistoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRow.swift; sourceTree = "<group>"; };
+		5176C0C1D0840896E40495DC /* StreakCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreakCalculatorTests.swift; sourceTree = "<group>"; };
+		561F947824102C9D27446284 /* StatusBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBanner.swift; sourceTree = "<group>"; };
+		5DA4E26C5182F2B4420EBDCB /* EmergencyContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyContact.swift; sourceTree = "<group>"; };
+		7090DD33DBA1A95013003759 /* SetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupView.swift; sourceTree = "<group>"; };
+		790EFEF49AC0A8FF4AB06195 /* AliveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliveButton.swift; sourceTree = "<group>"; };
+		7CDBE4DAF322F03AE988252A /* DeadYetFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeadYetFonts.swift; sourceTree = "<group>"; };
+		981E07FB4FB2F6A8707D9938 /* EmergencyContactTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyContactTests.swift; sourceTree = "<group>"; };
+		9896945ED27DADC572E501DB /* CheckInEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInEngineTests.swift; sourceTree = "<group>"; };
+		AC60E1ACDDAA308C11D64923 /* BackendSyncProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendSyncProtocol.swift; sourceTree = "<group>"; };
+		B15F8F3C4371F9D6CA8D0452 /* DeadYetTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = DeadYetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA1FE394955C34CC5BD60C49 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		BA95E0128FC88CC8A387800E /* GracePeriod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GracePeriod.swift; sourceTree = "<group>"; };
+		C1C72151E72FD6A12934DE20 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		C8BBFF7617C8A6F353D7ACC2 /* StreakCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreakCalculator.swift; sourceTree = "<group>"; };
+		D53E7901B1AD671B3E90FC2F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		D9ADFD22A2C300D928A167FC /* DeadYetColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeadYetColors.swift; sourceTree = "<group>"; };
+		DDE6694A708C97A22A40F711 /* CountdownDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownDisplay.swift; sourceTree = "<group>"; };
+		E67AA942CD218D3B95B064CF /* CheckInRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInRecord.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		216B583AF938B39E36C694BF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				097C614529EE6C33550F943E /* DeadYet.app */,
+				B15F8F3C4371F9D6CA8D0452 /* DeadYetTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		50EF8375A82670287F8F7BC5 = {
+			isa = PBXGroup;
+			children = (
+				E552E029C54D13A77B111254 /* Sources */,
+				A0852CE9DCDA558903683791 /* Tests */,
+				216B583AF938B39E36C694BF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		85304DDE20B4C8F9BB934871 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				34666AF9B77981AB47F3F351 /* CheckInEngine.swift */,
+				C8BBFF7617C8A6F353D7ACC2 /* StreakCalculator.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		A0852CE9DCDA558903683791 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				C5F3EF1B3A46FA671AE315B1 /* DeadYetTests */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		A46AD15117D318CE1F9BBCE5 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				0A54057BBA822DD5950F000D /* DeadYetApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		C32692422BBC23A0080741CF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				071148BE11BD3191BF891EA0 /* HistoryView.swift */,
+				0331A7D5B9F2E1703DEA8083 /* HomeView.swift */,
+				00657DE8292FDAE53EE7B52B /* HomeViewModel.swift */,
+				D53E7901B1AD671B3E90FC2F /* SettingsView.swift */,
+				7090DD33DBA1A95013003759 /* SetupView.swift */,
+				D235984FB59AFB6D43F4AC70 /* Components */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C5F3EF1B3A46FA671AE315B1 /* DeadYetTests */ = {
+			isa = PBXGroup;
+			children = (
+				9896945ED27DADC572E501DB /* CheckInEngineTests.swift */,
+				981E07FB4FB2F6A8707D9938 /* EmergencyContactTests.swift */,
+				5176C0C1D0840896E40495DC /* StreakCalculatorTests.swift */,
+			);
+			path = DeadYetTests;
+			sourceTree = "<group>";
+		};
+		D16D8E280EFD678CB66BCA83 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BA1FE394955C34CC5BD60C49 /* AppState.swift */,
+				E67AA942CD218D3B95B064CF /* CheckInRecord.swift */,
+				5DA4E26C5182F2B4420EBDCB /* EmergencyContact.swift */,
+				BA95E0128FC88CC8A387800E /* GracePeriod.swift */,
+				03F487180DA096074324EBC1 /* UserSettings.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D235984FB59AFB6D43F4AC70 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				790EFEF49AC0A8FF4AB06195 /* AliveButton.swift */,
+				DDE6694A708C97A22A40F711 /* CountdownDisplay.swift */,
+				46F4ADDCB6B8A9DC42BC62C8 /* HistoryRow.swift */,
+				561F947824102C9D27446284 /* StatusBanner.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		D909C168989B155968FDCA73 /* DeadYet */ = {
+			isa = PBXGroup;
+			children = (
+				A46AD15117D318CE1F9BBCE5 /* App */,
+				D16D8E280EFD678CB66BCA83 /* Models */,
+				E00C2A5B73C01D5CD0558DF8 /* Services */,
+				85304DDE20B4C8F9BB934871 /* State */,
+				E87ED20BF94F68D6478BD129 /* Theme */,
+				C32692422BBC23A0080741CF /* Views */,
+			);
+			path = DeadYet;
+			sourceTree = "<group>";
+		};
+		E00C2A5B73C01D5CD0558DF8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AC60E1ACDDAA308C11D64923 /* BackendSyncProtocol.swift */,
+				C1C72151E72FD6A12934DE20 /* NotificationService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E552E029C54D13A77B111254 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				D909C168989B155968FDCA73 /* DeadYet */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		E87ED20BF94F68D6478BD129 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				D9ADFD22A2C300D928A167FC /* DeadYetColors.swift */,
+				7CDBE4DAF322F03AE988252A /* DeadYetFonts.swift */,
+				040D1C68F15E9BE091E54477 /* DeadYetStyle.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4821833AAF4B94009406C3CC /* DeadYetTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E0A811CCA7F98A9C8BD71B4F /* Build configuration list for PBXNativeTarget "DeadYetTests" */;
+			buildPhases = (
+				FE3D721AD189DCCEF5A1FB59 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA09761C23DA85B3192CD921 /* PBXTargetDependency */,
+			);
+			name = DeadYetTests;
+			packageProductDependencies = (
+			);
+			productName = DeadYetTests;
+			productReference = B15F8F3C4371F9D6CA8D0452 /* DeadYetTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		901AD0003F5463D01783AF6E /* DeadYet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B0059897A085A38C8EB7830 /* Build configuration list for PBXNativeTarget "DeadYet" */;
+			buildPhases = (
+				306494F68404854AC9208304 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DeadYet;
+			packageProductDependencies = (
+			);
+			productName = DeadYet;
+			productReference = 097C614529EE6C33550F943E /* DeadYet.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		916BFAB15AC346BDCE7F190A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					901AD0003F5463D01783AF6E = {
+						DevelopmentTeam = "";
+					};
+				};
+			};
+			buildConfigurationList = 5EAC1E9F60092EF711E13D7A /* Build configuration list for PBXProject "DeadYet" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 50EF8375A82670287F8F7BC5;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 216B583AF938B39E36C694BF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				901AD0003F5463D01783AF6E /* DeadYet */,
+				4821833AAF4B94009406C3CC /* DeadYetTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		306494F68404854AC9208304 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66B081916938F8624246A4B7 /* AliveButton.swift in Sources */,
+				DC4079FE3C94AFEF9EDE5A17 /* AppState.swift in Sources */,
+				1DD894E6DDB0594C5EE42DB8 /* BackendSyncProtocol.swift in Sources */,
+				6125B872F6F66B4706F1CF55 /* CheckInEngine.swift in Sources */,
+				BF723204AC5C39625ADDB794 /* CheckInRecord.swift in Sources */,
+				137192D2631A9DEC4AC8182D /* CountdownDisplay.swift in Sources */,
+				D38B075F766157C9296FB404 /* DeadYetApp.swift in Sources */,
+				DA9C3613DD7E2B6792097E54 /* DeadYetColors.swift in Sources */,
+				8EE15301AF6D857987F4CED9 /* DeadYetFonts.swift in Sources */,
+				82DF69BEA5FB35190B932DDE /* DeadYetStyle.swift in Sources */,
+				DFD21A55301D1A6F7607B696 /* EmergencyContact.swift in Sources */,
+				8614D06C43C0119884C680A5 /* GracePeriod.swift in Sources */,
+				19C54044A115A777647213F9 /* HistoryRow.swift in Sources */,
+				1A235C41452786D9669AC380 /* HistoryView.swift in Sources */,
+				5B469B45924FAABE08678A60 /* HomeView.swift in Sources */,
+				48340B620D782D4A72E1BD71 /* HomeViewModel.swift in Sources */,
+				7E58E48774C70A63BC66113F /* NotificationService.swift in Sources */,
+				7E3252BEBA9D7DF056210CFB /* SettingsView.swift in Sources */,
+				961F9784CDC08A6E433F9218 /* SetupView.swift in Sources */,
+				E3C345C0F8665DAE30493E83 /* StatusBanner.swift in Sources */,
+				1016353A9DE89D4F1801ED05 /* StreakCalculator.swift in Sources */,
+				2E6D2B5CAFB1D5D397401BA0 /* UserSettings.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE3D721AD189DCCEF5A1FB59 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DC5F673AC1FC27A83E14048 /* CheckInEngineTests.swift in Sources */,
+				276BB1479D70122C4B80CA63 /* EmergencyContactTests.swift in Sources */,
+				2D8B34AE6740F48F92975785 /* StreakCalculatorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CA09761C23DA85B3192CD921 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 901AD0003F5463D01783AF6E /* DeadYet */;
+			targetProxy = 1E84B5BF26FFE992D7468967 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		5F131CB127BD58B4BFFE0EAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_KEY_CFBundleDisplayName = "Dead Yet";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.deadyet.app;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7E868842C3AB0E58CDAB3A06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.deadyet.DeadYetTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DeadYet.app/DeadYet";
+			};
+			name = Debug;
+		};
+		9049E538CB2BDE74B2433AA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_KEY_CFBundleDisplayName = "Dead Yet";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.deadyet.app;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C38EEEB1C4F378958BDBE13F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		C4E09F56449896877B1F1C29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.deadyet.DeadYetTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DeadYet.app/DeadYet";
+			};
+			name = Release;
+		};
+		CEDF8FEA9ADF5061B8293B01 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5EAC1E9F60092EF711E13D7A /* Build configuration list for PBXProject "DeadYet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C38EEEB1C4F378958BDBE13F /* Debug */,
+				CEDF8FEA9ADF5061B8293B01 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		9B0059897A085A38C8EB7830 /* Build configuration list for PBXNativeTarget "DeadYet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F131CB127BD58B4BFFE0EAC /* Debug */,
+				9049E538CB2BDE74B2433AA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E0A811CCA7F98A9C8BD71B4F /* Build configuration list for PBXNativeTarget "DeadYetTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E868842C3AB0E58CDAB3A06 /* Debug */,
+				C4E09F56449896877B1F1C29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 916BFAB15AC346BDCE7F190A /* Project object */;
+}
