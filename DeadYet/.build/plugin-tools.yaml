@@ -1,0 +1,146 @@
+client:
+  name: basic
+  file-system: device-agnostic
+tools: {}
+targets:
+  "DeadYet-arm64-apple-macosx26.0-debug.exe": ["<DeadYet-arm64-apple-macosx26.0-debug.exe>"]
+  "DeadYet-arm64-apple-macosx26.0-debug.module": ["<DeadYet-arm64-apple-macosx26.0-debug.module>"]
+  "DeadYetPackageTests-arm64-apple-macosx26.0-debug.module": ["<DeadYetPackageTests-arm64-apple-macosx26.0-debug.module>"]
+  "DeadYetPackageTests-arm64-apple-macosx26.0-debug.test": ["<DeadYetPackageTests-arm64-apple-macosx26.0-debug.test>"]
+  "DeadYetTests-arm64-apple-macosx26.0-debug.module": ["<DeadYetTests-arm64-apple-macosx26.0-debug.module>"]
+  "PackageStructure": ["<PackageStructure>"]
+  "main": ["<DeadYet-arm64-apple-macosx26.0-debug.exe>","<DeadYet-arm64-apple-macosx26.0-debug.module>"]
+  "test": ["<DeadYet-arm64-apple-macosx26.0-debug.exe>","<DeadYet-arm64-apple-macosx26.0-debug.module>","<DeadYetPackageTests-arm64-apple-macosx26.0-debug.test>","<DeadYetTests-arm64-apple-macosx26.0-debug.module>"]
+default: "main"
+nodes:
+  "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/Sources/DeadYet/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/Tests/DeadYetTests/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYet":
+    is-mutated: true
+commands:
+  "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYet-entitlement.plist":
+    tool: write-auxiliary-file
+    inputs: ["<entitlement-plist>","<com.apple.security.get-task-allow>"]
+    outputs: ["/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYet-entitlement.plist"]
+    description: "Write auxiliary file /Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYet-entitlement.plist"
+
+  "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYet.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/Sources/DeadYet/App/DeadYetApp.swift"]
+    outputs: ["/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYet.build/sources"]
+    description: "Write auxiliary file /Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYet.build/sources"
+
+  "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYet.product/Objects.LinkFileList":
+    tool: write-auxiliary-file
+    inputs: ["<link-file-list>","/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYet.build/DeadYetApp.swift.o"]
+    outputs: ["/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYet.product/Objects.LinkFileList"]
+    description: "Write auxiliary file /Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYet.product/Objects.LinkFileList"
+
+  "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetPackageTests.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetPackageTests.derived/runner.swift"]
+    outputs: ["/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetPackageTests.build/sources"]
+    description: "Write auxiliary file /Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetPackageTests.build/sources"
+
+  "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetPackageTests.derived/runner.swift":
+    tool: test-entry-point-tool
+    inputs: []
+    outputs: ["/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetPackageTests.derived/runner.swift"]
+
+  "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetPackageTests.product/Objects.LinkFileList":
+    tool: write-auxiliary-file
+    inputs: ["<link-file-list>","/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetPackageTests.build/runner.swift.o","/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetTests.build/PlaceholderTest.swift.o"]
+    outputs: ["/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetPackageTests.product/Objects.LinkFileList"]
+    description: "Write auxiliary file /Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetPackageTests.product/Objects.LinkFileList"
+
+  "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetTests.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/Tests/DeadYetTests/PlaceholderTest.swift"]
+    outputs: ["/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetTests.build/sources"]
+    description: "Write auxiliary file /Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetTests.build/sources"
+
+  "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt":
+    tool: write-auxiliary-file
+    inputs: ["<swift-get-version>","/Library/Developer/CommandLineTools/usr/bin/swiftc"]
+    outputs: ["/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"]
+    always-out-of-date: "true"
+    description: "Write auxiliary file /Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"
+
+  "<DeadYet-arm64-apple-macosx26.0-debug.exe>":
+    tool: phony
+    inputs: ["<DeadYet-arm64-apple-macosx26.0-debug.exe-CodeSigning>"]
+    outputs: ["<DeadYet-arm64-apple-macosx26.0-debug.exe>"]
+
+  "<DeadYet-arm64-apple-macosx26.0-debug.module>":
+    tool: phony
+    inputs: ["/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYet.build/DeadYetApp.swift.o","/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/Modules/DeadYet.swiftmodule"]
+    outputs: ["<DeadYet-arm64-apple-macosx26.0-debug.module>"]
+
+  "<DeadYetPackageTests-arm64-apple-macosx26.0-debug.module>":
+    tool: phony
+    inputs: ["/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetPackageTests.build/runner.swift.o","/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/Modules/DeadYetPackageTests.swiftmodule"]
+    outputs: ["<DeadYetPackageTests-arm64-apple-macosx26.0-debug.module>"]
+
+  "<DeadYetPackageTests-arm64-apple-macosx26.0-debug.test>":
+    tool: phony
+    inputs: ["/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetPackageTests.xctest/Contents/MacOS/DeadYetPackageTests"]
+    outputs: ["<DeadYetPackageTests-arm64-apple-macosx26.0-debug.test>"]
+
+  "<DeadYetTests-arm64-apple-macosx26.0-debug.module>":
+    tool: phony
+    inputs: ["/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetTests.build/PlaceholderTest.swift.o","/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/Modules/DeadYetTests.swiftmodule"]
+    outputs: ["<DeadYetTests-arm64-apple-macosx26.0-debug.module>"]
+
+  "C.DeadYet-arm64-apple-macosx26.0-debug.exe":
+    tool: shell
+    inputs: ["/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYet.build/DeadYetApp.swift.o","/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYet.product/Objects.LinkFileList"]
+    outputs: ["/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYet"]
+    description: "Linking ./.build/arm64-apple-macosx/debug/DeadYet"
+    args: ["/Library/Developer/CommandLineTools/usr/bin/swiftc","-L","/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug","-o","/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYet","-module-name","DeadYet","-Xlinker","-no_warn_duplicate_libraries","-emit-executable","-Xlinker","-alias","-Xlinker","_DeadYet_main","-Xlinker","_main","-Xlinker","-rpath","-Xlinker","@loader_path","@/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYet.product/Objects.LinkFileList","-Xlinker","-rpath","-Xlinker","/Library/Developer/CommandLineTools/usr/lib/swift-6.2/macosx","-target","arm64-apple-macosx14.0","-Xlinker","-add_ast_path","-Xlinker","/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/Modules/DeadYet.swiftmodule","-I","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-L","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-plugin-path","/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing","-sdk","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-g","-F","/Library/Developer/CommandLineTools/Library/Developer/Frameworks"]
+
+  "C.DeadYet-arm64-apple-macosx26.0-debug.exe-entitlements":
+    tool: shell
+    inputs: ["/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYet","/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYet-entitlement.plist"]
+    outputs: ["<DeadYet-arm64-apple-macosx26.0-debug.exe-CodeSigning>"]
+    description: "Applying debug entitlements to ./.build/arm64-apple-macosx/debug/DeadYet"
+    args: ["codesign","--force","--sign","-","--entitlements","/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYet-entitlement.plist","/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYet"]
+
+  "C.DeadYet-arm64-apple-macosx26.0-debug.module":
+    tool: shell
+    inputs: ["/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/Sources/DeadYet/App/DeadYetApp.swift","/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt","/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYet.build/sources"]
+    outputs: ["/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYet.build/DeadYetApp.swift.o","/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/Modules/DeadYet.swiftmodule"]
+    description: "Compiling Swift Module 'DeadYet' (1 sources)"
+    args: ["/Library/Developer/CommandLineTools/usr/bin/swiftc","-module-name","DeadYet","-emit-dependencies","-emit-module","-emit-module-path","/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/Modules/DeadYet.swiftmodule","-output-file-map","/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYet.build/output-file-map.json","-incremental","-c","@/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYet.build/sources","-I","/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx14.0","-incremental","-enable-batch-mode","-serialize-diagnostics","-index-store-path","/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-j10","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-Xfrontend","-entry-point-function-name","-Xfrontend","DeadYet_main","-parse-as-library","-swift-version","6","-I","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-L","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-plugin-path","/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing","-sdk","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-g","-F","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-Xcc","-isysroot","-Xcc","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-Xcc","-fPIC","-Xcc","-g","-package-name","deadyet"]
+
+  "C.DeadYetPackageTests-arm64-apple-macosx26.0-debug.module":
+    tool: shell
+    inputs: ["/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetPackageTests.derived/runner.swift","/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt","/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/Modules/DeadYetTests.swiftmodule","/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetPackageTests.build/sources"]
+    outputs: ["/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetPackageTests.build/runner.swift.o","/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/Modules/DeadYetPackageTests.swiftmodule"]
+    description: "Compiling Swift Module 'DeadYetPackageTests' (1 sources)"
+    args: ["/Library/Developer/CommandLineTools/usr/bin/swiftc","-module-name","DeadYetPackageTests","-emit-dependencies","-emit-module","-emit-module-path","/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/Modules/DeadYetPackageTests.swiftmodule","-output-file-map","/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetPackageTests.build/output-file-map.json","-parse-as-library","-incremental","-c","@/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetPackageTests.build/sources","-I","/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx14.0","-incremental","-enable-batch-mode","-serialize-diagnostics","-index-store-path","/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-Xfrontend","-enable-cross-import-overlays","-j10","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-emit-objc-header","-emit-objc-header-path","/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetPackageTests.build/include/DeadYetPackageTests-Swift.h","-I","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-L","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-plugin-path","/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing","-sdk","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-g","-F","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-Xcc","-isysroot","-Xcc","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-Xcc","-fPIC","-Xcc","-g","-package-name","deadyet"]
+
+  "C.DeadYetPackageTests-arm64-apple-macosx26.0-debug.test":
+    tool: shell
+    inputs: ["/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetPackageTests.build/runner.swift.o","/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetTests.build/PlaceholderTest.swift.o","/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetPackageTests.product/Objects.LinkFileList"]
+    outputs: ["/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetPackageTests.xctest/Contents/MacOS/DeadYetPackageTests"]
+    description: "Linking ./.build/arm64-apple-macosx/debug/DeadYetPackageTests.xctest/Contents/MacOS/DeadYetPackageTests"
+    args: ["/Library/Developer/CommandLineTools/usr/bin/swiftc","-L","/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug","-o","/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetPackageTests.xctest/Contents/MacOS/DeadYetPackageTests","-module-name","DeadYetPackageTests","-Xlinker","-no_warn_duplicate_libraries","-Xlinker","-bundle","-Xlinker","-rpath","-Xlinker","@loader_path/../../../","@/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetPackageTests.product/Objects.LinkFileList","-Xlinker","-rpath","-Xlinker","/Library/Developer/CommandLineTools/usr/lib/swift-6.2/macosx","-target","arm64-apple-macosx14.0","-Xlinker","-add_ast_path","-Xlinker","/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/Modules/DeadYetPackageTests.swiftmodule","-Xlinker","-add_ast_path","-Xlinker","/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/Modules/DeadYetTests.swiftmodule","-I","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-L","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-plugin-path","/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing","-sdk","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-g","-F","/Library/Developer/CommandLineTools/Library/Developer/Frameworks"]
+
+  "C.DeadYetTests-arm64-apple-macosx26.0-debug.module":
+    tool: shell
+    inputs: ["/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/Tests/DeadYetTests/PlaceholderTest.swift","/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt","/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetTests.build/sources"]
+    outputs: ["/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetTests.build/PlaceholderTest.swift.o","/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/Modules/DeadYetTests.swiftmodule"]
+    description: "Compiling Swift Module 'DeadYetTests' (1 sources)"
+    args: ["/Library/Developer/CommandLineTools/usr/bin/swiftc","-module-name","DeadYetTests","-emit-dependencies","-emit-module","-emit-module-path","/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/Modules/DeadYetTests.swiftmodule","-output-file-map","/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetTests.build/output-file-map.json","-parse-as-library","-incremental","-c","@/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetTests.build/sources","-I","/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx14.0","-incremental","-enable-batch-mode","-serialize-diagnostics","-index-store-path","/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-Xfrontend","-enable-cross-import-overlays","-j10","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-swift-version","6","-I","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-L","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-plugin-path","/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing","-sdk","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-g","-F","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-Xcc","-isysroot","-Xcc","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-Xcc","-fPIC","-Xcc","-g","-package-name","deadyet"]
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/Sources/DeadYet/","/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/Tests/DeadYetTests/","/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/Package.swift","/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+

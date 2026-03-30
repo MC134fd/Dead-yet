@@ -1,0 +1,56 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetPackageTests.xctest/Contents/MacOS/DeadYetPackageTests'
+relocations:
+  - { offset: 0xFF, size: 0x8, addend: 0x0, symName: '_$s19DeadYetPackageTests6RunnerV14testingLibrary33_B4E264BD8A2F44E15E89C250467EC59BLLSSyFZ', symObjAddr: 0x0, symBinAddr: 0xAC8, symSize: 0x230 }
+  - { offset: 0x1FC, size: 0x8, addend: 0x0, symName: ___swift_instantiateConcreteTypeFromMangledNameV2, symObjAddr: 0x230, symBinAddr: 0xCF8, symSize: 0x80 }
+  - { offset: 0x20F, size: 0x8, addend: 0x0, symName: '_$sSaySSGSayxGSlsWl', symObjAddr: 0x2B0, symBinAddr: 0xD78, symSize: 0x74 }
+  - { offset: 0x222, size: 0x8, addend: 0x0, symName: ___swift_instantiateConcreteTypeFromMangledNameAbstractV2, symObjAddr: 0x324, symBinAddr: 0xDEC, symSize: 0x78 }
+  - { offset: 0x235, size: 0x8, addend: 0x0, symName: '_$ss16IndexingIteratorVySaySSGGWOh', symObjAddr: 0x39C, symBinAddr: 0xE64, symSize: 0x28 }
+  - { offset: 0x248, size: 0x8, addend: 0x0, symName: '_$sS2cMScAsWl', symObjAddr: 0x624, symBinAddr: 0x10EC, symSize: 0x6C }
+  - { offset: 0x25B, size: 0x8, addend: 0x0, symName: '_$sIetH_yts5Error_pIegHrzo_TR', symObjAddr: 0x920, symBinAddr: 0x13E8, symSize: 0x78 }
+  - { offset: 0x278, size: 0x8, addend: 0x0, symName: '_$sIetH_yts5Error_pIegHrzo_TRTQ0_', symObjAddr: 0x998, symBinAddr: 0x1460, symSize: 0x64 }
+  - { offset: 0x295, size: 0x8, addend: 0x0, symName: '_$sIetH_yts5Error_pIegHrzo_TRTA', symObjAddr: 0xA24, symBinAddr: 0x14EC, symSize: 0x9C }
+  - { offset: 0x2A8, size: 0x8, addend: 0x0, symName: '_$sIetH_yts5Error_pIegHrzo_TRTATQ0_', symObjAddr: 0xAC0, symBinAddr: 0x1588, symSize: 0x60 }
+  - { offset: 0x2BB, size: 0x8, addend: 0x0, symName: '_$s19DeadYetPackageTests6RunnerVMa', symObjAddr: 0xB20, symBinAddr: 0x15E8, symSize: 0x14 }
+  - { offset: 0x322, size: 0x8, addend: 0x0, symName: '_$s19DeadYetPackageTests6RunnerV14testingLibrary33_B4E264BD8A2F44E15E89C250467EC59BLLSSyFZ', symObjAddr: 0x0, symBinAddr: 0xAC8, symSize: 0x230 }
+  - { offset: 0x3A2, size: 0x8, addend: 0x0, symName: '_$s19DeadYetPackageTests6RunnerV4mainyyYaFZ', symObjAddr: 0x3C4, symBinAddr: 0xE8C, symSize: 0xA8 }
+  - { offset: 0x3DF, size: 0x8, addend: 0x0, symName: '_$s19DeadYetPackageTests6RunnerV4mainyyYaFZTY0_', symObjAddr: 0x46C, symBinAddr: 0xF34, symSize: 0x15C }
+  - { offset: 0x41F, size: 0x8, addend: 0x0, symName: '_$s19DeadYetPackageTests6RunnerV4mainyyYaFZTQ1_', symObjAddr: 0x5C8, symBinAddr: 0x1090, symSize: 0x5C }
+  - { offset: 0x460, size: 0x8, addend: 0x0, symName: '_$s19DeadYetPackageTests6RunnerV5$mainyyYaFZ', symObjAddr: 0x690, symBinAddr: 0x1158, symSize: 0x84 }
+  - { offset: 0x47D, size: 0x8, addend: 0x0, symName: '_$s19DeadYetPackageTests6RunnerV5$mainyyYaFZTQ0_', symObjAddr: 0x714, symBinAddr: 0x11DC, symSize: 0x8C }
+  - { offset: 0x49A, size: 0x8, addend: 0x0, symName: '_$s19DeadYetPackageTests6RunnerV5$mainyyYaFZTY1_', symObjAddr: 0x7A0, symBinAddr: 0x1268, symSize: 0x40 }
+  - { offset: 0x4B7, size: 0x8, addend: 0x0, symName: '_$s19DeadYetPackageTests6RunnerVACycfC', symObjAddr: 0x7E0, symBinAddr: 0x12A8, symSize: 0x4 }
+  - { offset: 0x4D7, size: 0x8, addend: 0x0, symName: _async_Main, symObjAddr: 0x7E4, symBinAddr: 0x12AC, symSize: 0x6C }
+  - { offset: 0x4EA, size: 0x8, addend: 0x0, symName: _async_MainTQ0_, symObjAddr: 0x850, symBinAddr: 0x1318, symSize: 0x48 }
+  - { offset: 0x4FD, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x898, symBinAddr: 0x1360, symSize: 0x88 }
+  - { offset: 0x58E, size: 0x8, addend: 0x0, symName: '_$s12DeadYetTests04$s12aB52Tests13packageBuilds4TestfMp_17Z5a5eb7a2ee84e7a1fMu_33_A090D8DDDB3E9A22D58F41053B9209F2LLyyYaYbKF', symObjAddr: 0x0, symBinAddr: 0x15FC, symSize: 0x20 }
+  - { offset: 0x5B0, size: 0x8, addend: 0x0, symName: '_$s12DeadYetTests04$s12aB59Tests13packageBuilds4TestfMp_24accessor5a5eb7a2ee84e7a1fMu_33_A090D8DDDB3E9A22D58F41053B9209F2LLySbSv_S2VSgSutXCvp', symObjAddr: 0xC08, symBinAddr: 0x4218, symSize: 0x0 }
+  - { offset: 0x5C9, size: 0x8, addend: 0x0, symName: '_$s12DeadYetTests04$s12aB68Tests13packageBuilds4TestfMp_33testContentRecord5a5eb7a2ee84e7a1fMu_33_A090D8DDDB3E9A22D58F41053B9209F2LLs6UInt32V4kind_AE9reserved1SbSv_S2VSgSutXCSg8accessorSu7contextSu9reserved2tvp', symObjAddr: 0xC10, symBinAddr: 0x4220, symSize: 0x0 }
+  - { offset: 0x5D6, size: 0x8, addend: 0x0, symName: '_$s12DeadYetTests04$s12aB52Tests13packageBuilds4TestfMp_17Z5a5eb7a2ee84e7a1fMu_33_A090D8DDDB3E9A22D58F41053B9209F2LLyyYaYbKF', symObjAddr: 0x0, symBinAddr: 0x15FC, symSize: 0x20 }
+  - { offset: 0x5F3, size: 0x8, addend: 0x0, symName: '_$s12DeadYetTests04$s12aB52Tests13packageBuilds4TestfMp_17Z5a5eb7a2ee84e7a1fMu_33_A090D8DDDB3E9A22D58F41053B9209F2LLyyYaYbKF0dabefgh10_7__localfJ1_L_yyScA_pSgYiYaYbKF', symObjAddr: 0x1B8, symBinAddr: 0x17B4, symSize: 0xE0 }
+  - { offset: 0x625, size: 0x8, addend: 0x0, symName: '_$s12DeadYetTests04$s12aB52Tests13packageBuilds4TestfMp_17Z5a5eb7a2ee84e7a1fMu_33_A090D8DDDB3E9A22D58F41053B9209F2LLyyYaYbKF0dabefgh10_7__localfJ1_L_yyScA_pSgYiYaYbKFTY0_', symObjAddr: 0x298, symBinAddr: 0x1894, symSize: 0x9C }
+  - { offset: 0x681, size: 0x8, addend: 0x0, symName: '_$s12DeadYetTests04$s12aB52Tests13packageBuilds4TestfMp_17Z5a5eb7a2ee84e7a1fMu_33_A090D8DDDB3E9A22D58F41053B9209F2LLyyYaYbKF0dabefgh10_7__localfJ1_L_yyScA_pSgYiYaYbKFTQ1_', symObjAddr: 0x334, symBinAddr: 0x1930, symSize: 0x7C }
+  - { offset: 0x6B6, size: 0x8, addend: 0x0, symName: '_$s12DeadYetTests04$s12aB52Tests13packageBuilds4TestfMp_17Z5a5eb7a2ee84e7a1fMu_33_A090D8DDDB3E9A22D58F41053B9209F2LLyyYaYbKF0dabefgh10_7__localfJ1_L_yyScA_pSgYiYaYbKFTY2_', symObjAddr: 0x3B0, symBinAddr: 0x19AC, symSize: 0x11C }
+  - { offset: 0x6F0, size: 0x8, addend: 0x0, symName: '_$s12DeadYetTests04$s12aB52Tests13packageBuilds4TestfMp_17Z5a5eb7a2ee84e7a1fMu_33_A090D8DDDB3E9A22D58F41053B9209F2LLyyYaYbKFTY0_', symObjAddr: 0x20, symBinAddr: 0x161C, symSize: 0x84 }
+  - { offset: 0x713, size: 0x8, addend: 0x0, symName: '_$s12DeadYetTests04$s12aB52Tests13packageBuilds4TestfMp_17Z5a5eb7a2ee84e7a1fMu_33_A090D8DDDB3E9A22D58F41053B9209F2LLyyYaYbKFTQ1_', symObjAddr: 0xA4, symBinAddr: 0x16A0, symSize: 0xB0 }
+  - { offset: 0x736, size: 0x8, addend: 0x0, symName: '_$s12DeadYetTests04$s12aB52Tests13packageBuilds4TestfMp_17Z5a5eb7a2ee84e7a1fMu_33_A090D8DDDB3E9A22D58F41053B9209F2LLyyYaYbKFTY2_', symObjAddr: 0x154, symBinAddr: 0x1750, symSize: 0x50 }
+  - { offset: 0x759, size: 0x8, addend: 0x0, symName: '_$s12DeadYetTests04$s12aB52Tests13packageBuilds4TestfMp_17Z5a5eb7a2ee84e7a1fMu_33_A090D8DDDB3E9A22D58F41053B9209F2LLyyYaYbKF0dabefgh10_7__localfJ1_L_yyScA_pSgYiYaYbKFfA_', symObjAddr: 0x1A4, symBinAddr: 0x17A0, symSize: 0x14 }
+  - { offset: 0x79C, size: 0x8, addend: 0x0, symName: '_$s12DeadYetTests13packageBuildsyyF', symObjAddr: 0x4CC, symBinAddr: 0x1AC8, symSize: 0x248 }
+  - { offset: 0x7CD, size: 0x8, addend: 0x0, symName: '_$s12DeadYetTests13packageBuildsyyF7Testing12__ExpressionVSgyXEfu0_', symObjAddr: 0xA78, symBinAddr: 0x2074, symSize: 0x40 }
+  - { offset: 0x7E4, size: 0x8, addend: 0x0, symName: '_$s12DeadYetTests13packageBuildsyyFSSSgyXEfu1_', symObjAddr: 0xAB8, symBinAddr: 0x20B4, symSize: 0xC }
+  - { offset: 0x7FB, size: 0x8, addend: 0x0, symName: '_$s12DeadYetTests13packageBuildsyyFSSSgyXEfu2_', symObjAddr: 0xAC4, symBinAddr: 0x20C0, symSize: 0xC }
+  - { offset: 0x812, size: 0x8, addend: 0x0, symName: '_$s12DeadYetTests13packageBuildsyyFSSSgyXEfu3_', symObjAddr: 0xAD0, symBinAddr: 0x20CC, symSize: 0xC }
+  - { offset: 0x829, size: 0x8, addend: 0x0, symName: '_$s12DeadYetTests13packageBuildsyyFSay7Testing7CommentVGyXEfu4_', symObjAddr: 0xADC, symBinAddr: 0x20D8, symSize: 0x30 }
+  - { offset: 0x841, size: 0x8, addend: 0x0, symName: '_$s12DeadYetTests04$s12aB60Tests13packageBuilds4TestfMp_25generator5a5eb7a2ee84e7a1fMu_33_A090D8DDDB3E9A22D58F41053B9209F2LL7Testing4TestVyYaYbF', symObjAddr: 0x714, symBinAddr: 0x1D10, symSize: 0x78 }
+  - { offset: 0x85E, size: 0x8, addend: 0x0, symName: '_$s12DeadYetTests04$s12aB60Tests13packageBuilds4TestfMp_25generator5a5eb7a2ee84e7a1fMu_33_A090D8DDDB3E9A22D58F41053B9209F2LL7Testing4TestVyYaYbFTY0_', symObjAddr: 0x78C, symBinAddr: 0x1D88, symSize: 0x1AC }
+  - { offset: 0x87B, size: 0x8, addend: 0x0, symName: '_$s12DeadYetTests04$s12aB59Tests13packageBuilds4TestfMp_24accessor5a5eb7a2ee84e7a1fMu_33_A090D8DDDB3E9A22D58F41053B9209F2LLySbSv_S2VSgSutXCvpfiSbSv_SVADSutcfU_', symObjAddr: 0x938, symBinAddr: 0x1F34, symSize: 0x6C }
+  - { offset: 0x8CD, size: 0x8, addend: 0x0, symName: '_$s12DeadYetTests04$s12aB59Tests13packageBuilds4TestfMp_24accessor5a5eb7a2ee84e7a1fMu_33_A090D8DDDB3E9A22D58F41053B9209F2LLySbSv_S2VSgSutXCvpfiSbSv_SVADSutcfU_To', symObjAddr: 0x9A4, symBinAddr: 0x1FA0, symSize: 0x18 }
+  - { offset: 0x8E4, size: 0x8, addend: 0x0, symName: '_$s12DeadYetTests04$s12aB59Tests13packageBuilds4TestfMp_24accessor5a5eb7a2ee84e7a1fMu_33_A090D8DDDB3E9A22D58F41053B9209F2LLySbSv_S2VSgSutXCvau', symObjAddr: 0x9BC, symBinAddr: 0x1FB8, symSize: 0xC }
+  - { offset: 0x901, size: 0x8, addend: 0x0, symName: '_$s12DeadYetTests04$s12aB68Tests13packageBuilds4TestfMp_33testContentRecord5a5eb7a2ee84e7a1fMu_33_A090D8DDDB3E9A22D58F41053B9209F2LLs6UInt32V4kind_AE9reserved1SbSv_S2VSgSutXCSg8accessorSu7contextSu9reserved2tvau', symObjAddr: 0x9C8, symBinAddr: 0x1FC4, symSize: 0xC }
+  - { offset: 0x94D, size: 0x8, addend: 0x0, symName: '_$ss6ResultOyyts5Error_pGWOh', symObjAddr: 0xB8C, symBinAddr: 0x2108, symSize: 0x34 }
+  - { offset: 0x960, size: 0x8, addend: 0x0, symName: '_$ss6ResultOyyts5Error_pGWOe', symObjAddr: 0xBC0, symBinAddr: 0x213C, symSize: 0x30 }
+  - { offset: 0x973, size: 0x8, addend: 0x0, symName: '_$s12DeadYetTests0072$s12DeadYetTests13packageBuilds4TestfMp_20__$5a5eb7a2ee84e7a1fMu__DHGFAeOMa', symObjAddr: 0xBF0, symBinAddr: 0x216C, symSize: 0x14 }
+  - { offset: 0x9BE, size: 0x8, addend: 0x0, symName: '_$s12DeadYetTests0072$s12DeadYetTests13packageBuilds4TestfMp_20__$5a5eb7a2ee84e7a1fMu__DHGFAeO19__testContentRecords6UInt32V4kind_AF9reserved1SbSv_S2VSgSutXCSg8accessorSu7contextSu9reserved2tvgZ', symObjAddr: 0x9D4, symBinAddr: 0x1FD0, symSize: 0x40 }
+  - { offset: 0x9E4, size: 0x8, addend: 0x0, symName: '_$s12DeadYetTests0072$s12DeadYetTests13packageBuilds4TestfMp_20__$5a5eb7a2ee84e7a1fMu__DHGFAeO7Testing28__TestContentRecordContainerAadEP06__testfG0s6UInt32V4kind_AI9reserved1SbSv_S2VSgSutXCSg8accessorSu7contextSu9reserved2tvgZTW', symObjAddr: 0xA14, symBinAddr: 0x2010, symSize: 0x64 }
+...

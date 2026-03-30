@@ -1,0 +1,599 @@
+{
+  "builtTestProducts" : [
+    {
+      "binaryPath" : "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetPackageTests.xctest/Contents/MacOS/DeadYetPackageTests",
+      "packagePath" : "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet",
+      "productName" : "DeadYetPackageTests"
+    }
+  ],
+  "copyCommands" : {
+
+  },
+  "explicitTargetDependencyImportCheckingMode" : {
+    "none" : {
+
+    }
+  },
+  "generatedSourceTargetSet" : [
+
+  ],
+  "pluginDescriptions" : [
+
+  ],
+  "swiftCommands" : {
+    "C.DeadYet-arm64-apple-macosx26.0-debug.module" : {
+      "executable" : "/Library/Developer/CommandLineTools/usr/bin/swiftc",
+      "fileList" : "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYet.build/sources",
+      "importPath" : "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/Sources/DeadYet/App/DeadYetApp.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYet.build/sources"
+        }
+      ],
+      "isLibrary" : false,
+      "moduleName" : "DeadYet",
+      "moduleOutputPath" : "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/Modules/DeadYet.swiftmodule",
+      "objects" : [
+        "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYet.build/DeadYetApp.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx14.0",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-Xfrontend",
+        "-entry-point-function-name",
+        "-Xfrontend",
+        "DeadYet_main",
+        "-parse-as-library",
+        "-swift-version",
+        "6",
+        "-I",
+        "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+        "-L",
+        "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+        "-plugin-path",
+        "/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+        "-g",
+        "-F",
+        "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "deadyet"
+      ],
+      "outputFileMapPath" : "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYet.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYet.build/DeadYetApp.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/Modules/DeadYet.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/Sources/DeadYet/App/DeadYetApp.swift"
+      ],
+      "tempsPath" : "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYet.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.DeadYetPackageTests-arm64-apple-macosx26.0-debug.module" : {
+      "executable" : "/Library/Developer/CommandLineTools/usr/bin/swiftc",
+      "fileList" : "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetPackageTests.build/sources",
+      "importPath" : "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetPackageTests.derived/runner.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/Modules/DeadYetTests.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetPackageTests.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "DeadYetPackageTests",
+      "moduleOutputPath" : "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/Modules/DeadYetPackageTests.swiftmodule",
+      "objects" : [
+        "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetPackageTests.build/runner.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx14.0",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-Xfrontend",
+        "-enable-cross-import-overlays",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetPackageTests.build/include/DeadYetPackageTests-Swift.h",
+        "-I",
+        "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+        "-L",
+        "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+        "-plugin-path",
+        "/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+        "-g",
+        "-F",
+        "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "deadyet"
+      ],
+      "outputFileMapPath" : "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetPackageTests.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetPackageTests.build/runner.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/Modules/DeadYetPackageTests.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetPackageTests.derived/runner.swift"
+      ],
+      "tempsPath" : "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetPackageTests.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.DeadYetTests-arm64-apple-macosx26.0-debug.module" : {
+      "executable" : "/Library/Developer/CommandLineTools/usr/bin/swiftc",
+      "fileList" : "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetTests.build/sources",
+      "importPath" : "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/Tests/DeadYetTests/PlaceholderTest.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetTests.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "DeadYetTests",
+      "moduleOutputPath" : "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/Modules/DeadYetTests.swiftmodule",
+      "objects" : [
+        "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetTests.build/PlaceholderTest.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx14.0",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-Xfrontend",
+        "-enable-cross-import-overlays",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-swift-version",
+        "6",
+        "-I",
+        "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+        "-L",
+        "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+        "-plugin-path",
+        "/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+        "-g",
+        "-F",
+        "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "deadyet"
+      ],
+      "outputFileMapPath" : "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetTests.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetTests.build/PlaceholderTest.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/Modules/DeadYetTests.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/Tests/DeadYetTests/PlaceholderTest.swift"
+      ],
+      "tempsPath" : "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetTests.build",
+      "wholeModuleOptimization" : false
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "swiftTargetScanArgs" : {
+    "DeadYet" : [
+      "/Library/Developer/CommandLineTools/usr/bin/swiftc",
+      "-module-name",
+      "DeadYet",
+      "-package-name",
+      "deadyet",
+      "-c",
+      "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/Sources/DeadYet/App/DeadYetApp.swift",
+      "-I",
+      "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx14.0",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-j10",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-Xfrontend",
+      "-entry-point-function-name",
+      "-Xfrontend",
+      "DeadYet_main",
+      "-parse-as-library",
+      "-swift-version",
+      "6",
+      "-I",
+      "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+      "-L",
+      "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+      "-plugin-path",
+      "/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-g",
+      "-F",
+      "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "deadyet",
+      "-driver-use-frontend-path",
+      "/Library/Developer/CommandLineTools/usr/bin/swiftc"
+    ],
+    "DeadYetPackageTests" : [
+      "/Library/Developer/CommandLineTools/usr/bin/swiftc",
+      "-module-name",
+      "DeadYetPackageTests",
+      "-package-name",
+      "deadyet",
+      "-c",
+      "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetPackageTests.derived/runner.swift",
+      "-I",
+      "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx14.0",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-Xfrontend",
+      "-enable-cross-import-overlays",
+      "-j10",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetPackageTests.build/include/DeadYetPackageTests-Swift.h",
+      "-I",
+      "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+      "-L",
+      "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+      "-plugin-path",
+      "/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-g",
+      "-F",
+      "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "deadyet",
+      "-driver-use-frontend-path",
+      "/Library/Developer/CommandLineTools/usr/bin/swiftc"
+    ],
+    "DeadYetTests" : [
+      "/Library/Developer/CommandLineTools/usr/bin/swiftc",
+      "-module-name",
+      "DeadYetTests",
+      "-package-name",
+      "deadyet",
+      "-c",
+      "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/Tests/DeadYetTests/PlaceholderTest.swift",
+      "-I",
+      "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx14.0",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-Xfrontend",
+      "-enable-cross-import-overlays",
+      "-j10",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-swift-version",
+      "6",
+      "-I",
+      "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+      "-L",
+      "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+      "-plugin-path",
+      "/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-g",
+      "-F",
+      "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "deadyet",
+      "-driver-use-frontend-path",
+      "/Library/Developer/CommandLineTools/usr/bin/swiftc"
+    ]
+  },
+  "targetDependencyMap" : {
+    "DeadYet" : [
+
+    ],
+    "DeadYetPackageTests" : [
+      "DeadYetTests"
+    ],
+    "DeadYetTests" : [
+
+    ]
+  },
+  "testDiscoveryCommands" : {
+
+  },
+  "testEntryPointCommands" : {
+    "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetPackageTests.derived/runner.swift" : {
+      "inputs" : [
+
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetPackageTests.derived/runner.swift"
+        }
+      ]
+    }
+  },
+  "traitConfiguration" : {
+    "default" : {
+
+    }
+  },
+  "writeCommands" : {
+    "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYet-entitlement.plist" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<entitlement-plist>"
+        },
+        {
+          "kind" : "virtual",
+          "name" : "<com.apple.security.get-task-allow>"
+        }
+      ],
+      "outputFilePath" : "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYet-entitlement.plist"
+    },
+    "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYet.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/Sources/DeadYet/App/DeadYetApp.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYet.build/sources"
+    },
+    "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYet.product/Objects.LinkFileList" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYet.build/DeadYetApp.swift.o"
+        }
+      ],
+      "outputFilePath" : "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYet.product/Objects.LinkFileList"
+    },
+    "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetPackageTests.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetPackageTests.derived/runner.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetPackageTests.build/sources"
+    },
+    "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetPackageTests.product/Objects.LinkFileList" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetPackageTests.build/runner.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetTests.build/PlaceholderTest.swift.o"
+        }
+      ],
+      "outputFilePath" : "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetPackageTests.product/Objects.LinkFileList"
+    },
+    "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetTests.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/Tests/DeadYetTests/PlaceholderTest.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/DeadYetTests.build/sources"
+    },
+    "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt" : {
+      "alwaysOutOfDate" : true,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<swift-get-version>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Library/Developer/CommandLineTools/usr/bin/swiftc"
+        }
+      ],
+      "outputFilePath" : "/Users/marcuschien/code/MC134fd/dead-yet/DeadYet/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"
+    }
+  }
+}
