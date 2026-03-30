@@ -46,7 +46,7 @@ Age 22-35, lives alone (or functionally alone), urban, digitally native. Probabl
 
 **Edge cases:**
 - First launch (no prior check-in): show "No check-ins yet" with deadline info
-- Timezone changes (travel): deadlines follow device local time
+- Timezone changes (travel): deadlines follow device local time (see Timezone Rules below)
 
 **Out of scope for V1:** Animated countdown ring, widget.
 
@@ -88,7 +88,33 @@ Age 22-35, lives alone (or functionally alone), urban, digitally native. Probabl
 - Check in after SMS sent: records check-in, shows "Contact was notified" for that day
 - Phone is dead/off during grace period: backend handles SMS on its own timer (no device dependency)
 
-**Out of scope for V1:** Snooze button, pause/vacation mode, multi-step escalation.
+**Post-escalation behavior:**
+- When user opens app after SMS was sent:
+  - Status text: "Your emergency contact was notified"
+  - Subtext: "[Contact name] was texted at [time]"
+  - "I'M ALIVE" button remains active
+  - No visual panic (no flashing red) — the damage is done, keep it factual
+- When user checks in after escalation:
+  - State returns to SAFE
+  - Day marked as "missed + escalated" in history
+  - "Contact was notified" info persists until next deadline reset
+  - No follow-up "they're OK" SMS sent to contact
+
+**Out of scope for V1:** Snooze button, pause/vacation mode, multi-step escalation, auto follow-up SMS.
+
+### SMS Content
+
+**Purpose:** Define the message the emergency contact receives.
+
+**SMS copy:**
+> [Name] hasn't checked into Dead-Yet in over [X] hours. You are listed as their emergency contact. This is probably nothing — but you might want to check on them.
+
+**Rules:**
+- User's display name from Apple Sign-In or settings
+- Hours elapsed, rounded down (e.g., "14 hours" not "14 hours 12 minutes")
+- One SMS per missed day — no repeats, no follow-up
+- No app links, no marketing content in the SMS
+- No follow-up "they're OK" SMS when user eventually checks in
 
 ### 5. Notifications
 
@@ -107,6 +133,21 @@ Age 22-35, lives alone (or functionally alone), urban, digitally native. Probabl
 
 **Out of scope for V1:** Critical alerts (requires Apple entitlement), sound customization.
 
+### Notification Copy
+
+| Trigger | Timing | Copy |
+|---------|--------|------|
+| Daily reminder | Configurable (default 1hr before deadline) | "You haven't checked in today." |
+| Deadline reached | At deadline | "Deadline passed. Check in now." |
+| Overdue warning 1 | 15 min into grace | "1h 45m until your emergency contact is notified." |
+| Overdue warning 2 | 30 min into grace | "1h 30m until your emergency contact is notified." |
+| Overdue warning 3 | 60 min into grace | "1h until your emergency contact is notified." |
+| Overdue warning 4 | 90 min into grace | "30 minutes." |
+| Final warning | 105 min into grace | "15 minutes." |
+| Escalated | After SMS sent | "Your emergency contact has been notified." |
+
+**Tone rules:** No emoji. No exclamation marks. Gets terser as time runs out. Never say "please." Periods only.
+
 ### 6. Simple History / Streak
 
 **Purpose:** Light engagement loop. Factual, not gamified.
@@ -116,38 +157,48 @@ Age 22-35, lives alone (or functionally alone), urban, digitally native. Probabl
 - Total check-ins (all-time count)
 - Missed days (total missed deadlines)
 - Displayed on a secondary screen (not home)
-- Minimal presentation: just numbers, no charts or calendars
+- Last 30 days of activity, scrollable list
+- Each row: date + check-in time OR status
+- Color-coded indicators: green (checked in), yellow (missed, caught in grace), red (escalated)
+- Summary stats at top: current streak / total check-ins / missed days
+- Fewer than 30 days of data: show all available
 
 **Edge cases:**
 - First day: streak is 0 until first check-in
 - Missed day: streak resets to 0
+- Escalated day: red indicator + "Missed — contact notified"
 
 **Out of scope for V1:** Calendar heatmap, weekly/monthly views, streak rewards, sharing.
 
 ## App Structure
 
-**3 screens. No tab bar. No navigation clutter.**
+**4 screens. No tab bar. No navigation clutter.**
 
-1. **Home** - the main screen:
+1. **First Launch Setup** - one-time modal (shown once, never again):
+   - Time picker: "When should we check if you're alive?" (default position 10:00 AM)
+   - Optional emergency contact: "Who should we tell?" (name + phone fields)
+   - Button: "GET STARTED"
+   - Contact fields are optional — user can skip and add later in settings
+   - If user force-quits during setup: show it again next launch
+
+2. **Home** - the main screen:
    - "I'M ALIVE" button (dominant, center)
    - Countdown timer to next deadline
    - Last check-in timestamp
    - Current state indicator (safe / due soon / overdue)
    - Current streak (small, bottom)
 
-2. **Settings** - modal sheet from home:
+3. **Settings** - modal sheet from home:
    - Emergency contact (name + phone)
    - Daily deadline time picker
-   - Grace period duration
+   - Grace period duration (preset: 30 min / 1 hr / 2 hr / 4 hr)
    - Notification preferences
 
-3. **History** - modal sheet from home:
-   - Current streak
-   - Total check-ins
-   - Missed days
-   - Simple list of recent check-ins with timestamps
+4. **History** - modal sheet from home:
+   - Summary stats: current streak / total check-ins / missed days
+   - Last 30 days scrollable list with color-coded indicators
 
-**Navigation:** Home is the app. Settings and History are modal sheets that slide up from bottom.
+**Navigation:** Home is the app. Settings and History are modal sheets that slide up from bottom. First Launch Setup is shown once before Home on first open.
 
 ## UX / Visual Direction
 
@@ -244,7 +295,7 @@ ESCALATED
 
 2. **Single emergency contact only** - one contact, no trees, no groups.
 
-3. **No onboarding flow** - app opens to home screen. If no contact is set, persistent banner nudges setup. Check-in is not gated behind setup.
+3. **Minimal first-launch setup (one screen, not a flow)** - single modal on first open with time picker + optional emergency contact. Not onboarding — no welcome screens, no feature tours, no slides. One functional setup screen, then straight to home. If no contact is set after setup, persistent banner nudges setup on home screen.
 
 4. **Local-first, backend-synced** - check-in state lives on device. Backend receives sync of check-in events and runs escalation timer independently. If phone is dead, backend still fires.
 
@@ -252,20 +303,56 @@ ESCALATED
 
 6. **No pause/vacation mode in V1** - users either check in or they don't.
 
+## Timezone Rules
+
+- Deadline stored as **wall-clock time** (e.g., "10:00 AM"), not a UTC offset
+- Travel: 10 AM means 10 AM in whatever timezone the device is in
+- If user flies NYC → LA: deadline becomes 10:00 AM Pacific (they gain 3 hours)
+- If user flies LA → NYC: deadline becomes 10:00 AM Eastern (they lose 3 hours)
+- Backend uses user's **last-known timezone**, synced on each app open and check-in
+- If timezone changes mid-grace-period: grace period continues from original start (no extension/reduction)
+
+## Backend Escalation Details
+
+- Backend timer starts at **deadline time** (not at last check-in)
+- On each check-in sync: backend records timestamp and resets the next escalation window
+- Phone dead all day: backend fires based on deadline + grace period using last-known timezone
+- Twilio failure: retry 3 times over 10 minutes, then log as "escalation failed" (monitor)
+- Late device sync (check-in arrives after SMS already sent): record check-in, no SMS undo
+- Cloud Function: per-user scheduled trigger, not global polling
+
+## Settings Defaults
+
+| Setting | Default | Options |
+|---------|---------|---------|
+| Daily deadline | User picks at first launch (picker starts at 10:00 AM) | Any time, 15-min increments |
+| Grace period | 2 hours | 30 min / 1 hr / 2 hr / 4 hr |
+| Daily reminder | 1 hour before deadline | 30 min / 1 hr / 2 hr / off |
+| Emergency contact | None (set at first launch or settings) | Name + phone |
+
+**Notes:**
+- No notification sound setting in V1
+- Reminder "off" disables daily nudge only — overdue warnings are always on
+- Grace period is preset picker, not free-form
+
 ---
 
 ## Clarified Product Requirements
 
 - Daily check-in app with one primary action ("I'M ALIVE") per day
-- User-configurable deadline time (when the check-in is due)
-- 2-hour default grace period after missed deadline, configurable in settings
-- Single emergency contact (name + phone number)
+- User-configurable deadline time (picked at first launch, changeable in settings)
+- 2-hour default grace period after missed deadline, configurable (30min / 1hr / 2hr / 4hr)
+- Single emergency contact (name + phone number), set at first launch or settings
 - SMS escalation via Twilio when grace period expires without check-in
-- Backend-driven escalation timer (device-independent)
-- Simple streak/history tracking (streak, total check-ins, missed days)
-- Local notifications: daily reminder, deadline reminder, overdue warnings every 15 min
+- Defined SMS copy: measured tone, hours elapsed, "probably nothing" framing
+- No follow-up SMS when user eventually checks in after escalation
+- Backend-driven escalation timer (device-independent, per-user scheduled trigger)
+- Simple streak/history tracking (streak, total check-ins, missed days, last 30 days list)
+- History color-coded: green (checked in), yellow (missed, caught in grace), red (escalated)
+- Local notifications with defined copy: daily reminder, deadline, overdue warnings (get terser), escalation confirmation
 - Dark tier tone: serious, provocative, not goofy
-- No onboarding, no pause mode, no multi-contact, no social features
+- Minimal first-launch setup (one screen: time picker + optional contact), no multi-screen onboarding
+- No pause mode, no multi-contact, no social features
 
 ## Technical Requirements
 
@@ -284,20 +371,22 @@ ESCALATED
 
 - **Local-first:** Check-in state and history stored on device. Backend is for escalation reliability, not for the primary UX.
 - **Offline-capable:** User can check in without connectivity. Sync when connection resumes. Backend timer starts from last known check-in.
-- **Minimal surface area:** 3 screens, no tab bar, no complex navigation. Every screen earns its existence.
+- **Minimal surface area:** 4 screens (setup + home + settings + history), no tab bar, no complex navigation. Every screen earns its existence.
 - **State-driven UI:** The 5-state model drives all UI changes. No ad-hoc conditional rendering.
 - **No feature creep:** If it's not in this spec, it doesn't exist in V1.
 
 ## Hard Constraints
 
-- No onboarding screens
+- No multi-screen onboarding (one functional setup screen only)
 - No multiple emergency contacts
 - No pause/vacation mode
 - No widgets, Watch app, or notification actions for check-in
 - No social features, sharing, or feed
 - No AI, chat, or wearable integrations
-- No charts, calendars, or analytics beyond streak/total/missed
+- No charts, calendars, or analytics beyond streak/total/missed/30-day list
 - No monetization logic in V1 codebase
-- SMS is the only escalation channel (no WhatsApp, Telegram, email)
+- SMS is the only escalation channel in V1 (no WhatsApp, Telegram, email). Data model should store contact as a structured object (not just a phone string) to support adding email in V2 without migration.
+- No follow-up "they're OK" SMS after escalation
 - One check-in per day (no multiple check-ins)
 - Backend must be able to escalate independently of device state
+- Deadlines use wall-clock time (not UTC offsets)
