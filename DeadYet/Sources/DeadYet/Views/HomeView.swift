@@ -4,7 +4,7 @@ import SwiftData
 struct HomeView: View {
     @Environment(\.modelContext) private var modelContext
     @State private var viewModel = HomeViewModel()
-    @State private var showSettings = false
+    @State private var showProfile = false
     @State private var showHistory = false
 
     var body: some View {
@@ -13,9 +13,9 @@ struct HomeView: View {
 
             VStack(spacing: 0) {
                 HStack {
-                    Button(action: { showSettings = true }) {
-                        Image(systemName: "gearshape")
-                            .font(.system(size: 20))
+                    Button(action: { showProfile = true }) {
+                        Image(systemName: "person.circle")
+                            .font(.system(size: 22))
                             .foregroundStyle(DeadYetColors.primaryText.opacity(0.5))
                     }
                     Spacer()
@@ -80,8 +80,8 @@ struct HomeView: View {
         }
         .onAppear { viewModel.start(modelContext: modelContext) }
         .onDisappear { viewModel.stop() }
-        .sheet(isPresented: $showSettings) {
-            SettingsView()
+        .sheet(isPresented: $showProfile) {
+            ProfileView()
                 .onDisappear { viewModel.updateState() }
         }
         .sheet(isPresented: $showHistory) {

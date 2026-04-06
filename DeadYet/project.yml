@@ -7,6 +7,11 @@ options:
   createIntermediateGroups: true
   generateEmptyDirectories: true
 
+packages:
+  GoogleSignIn-iOS:
+    url: https://github.com/google/GoogleSignIn-iOS.git
+    from: "8.0.0"
+
 settings:
   base:
     SWIFT_VERSION: "6.0"
@@ -20,6 +25,9 @@ targets:
     platform: iOS
     sources:
       - path: Sources/DeadYet
+    dependencies:
+      - package: GoogleSignIn-iOS
+        product: GoogleSignIn
     settings:
       base:
         INFOPLIST_KEY_UIApplicationSceneManifest_Generation: true

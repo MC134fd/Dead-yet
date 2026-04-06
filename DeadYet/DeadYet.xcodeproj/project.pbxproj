@@ -19,6 +19,7 @@
 		48340B620D782D4A72E1BD71 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00657DE8292FDAE53EE7B52B /* HomeViewModel.swift */; };
 		5B469B45924FAABE08678A60 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0331A7D5B9F2E1703DEA8083 /* HomeView.swift */; };
 		6125B872F6F66B4706F1CF55 /* CheckInEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34666AF9B77981AB47F3F351 /* CheckInEngine.swift */; };
+		61725F2F6E76C511AA2512D1 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF6D53D277F12E026E96C94 /* AuthenticationService.swift */; };
 		66B081916938F8624246A4B7 /* AliveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790EFEF49AC0A8FF4AB06195 /* AliveButton.swift */; };
 		7E3252BEBA9D7DF056210CFB /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53E7901B1AD671B3E90FC2F /* SettingsView.swift */; };
 		7E58E48774C70A63BC66113F /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C72151E72FD6A12934DE20 /* NotificationService.swift */; };
@@ -26,12 +27,15 @@
 		8614D06C43C0119884C680A5 /* GracePeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA95E0128FC88CC8A387800E /* GracePeriod.swift */; };
 		8EE15301AF6D857987F4CED9 /* DeadYetFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDBE4DAF322F03AE988252A /* DeadYetFonts.swift */; };
 		961F9784CDC08A6E433F9218 /* SetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7090DD33DBA1A95013003759 /* SetupView.swift */; };
+		9BC0AC3E87D148ADB4692997 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 1473765983A7C62405DF6595 /* GoogleSignIn */; };
 		BF723204AC5C39625ADDB794 /* CheckInRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67AA942CD218D3B95B064CF /* CheckInRecord.swift */; };
 		D38B075F766157C9296FB404 /* DeadYetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A54057BBA822DD5950F000D /* DeadYetApp.swift */; };
+		D7F9F40E9D810024C2A4AD84 /* CountryCodePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0EFF6B0BB7CFD9038F9262 /* CountryCodePicker.swift */; };
 		DA9C3613DD7E2B6792097E54 /* DeadYetColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9ADFD22A2C300D928A167FC /* DeadYetColors.swift */; };
 		DC4079FE3C94AFEF9EDE5A17 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1FE394955C34CC5BD60C49 /* AppState.swift */; };
 		DFD21A55301D1A6F7607B696 /* EmergencyContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA4E26C5182F2B4420EBDCB /* EmergencyContact.swift */; };
 		E3C345C0F8665DAE30493E83 /* StatusBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561F947824102C9D27446284 /* StatusBanner.swift */; };
+		EC1DE3F504F11181BA00E817 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE136CBD406401510ADFA36 /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +56,7 @@
 		071148BE11BD3191BF891EA0 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		097C614529EE6C33550F943E /* DeadYet.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = DeadYet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A54057BBA822DD5950F000D /* DeadYetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeadYetApp.swift; sourceTree = "<group>"; };
+		1E0EFF6B0BB7CFD9038F9262 /* CountryCodePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCodePicker.swift; sourceTree = "<group>"; };
 		34666AF9B77981AB47F3F351 /* CheckInEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInEngine.swift; sourceTree = "<group>"; };
 		46F4ADDCB6B8A9DC42BC62C8 /* HistoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRow.swift; sourceTree = "<group>"; };
 		5176C0C1D0840896E40495DC /* StreakCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreakCalculatorTests.swift; sourceTree = "<group>"; };
@@ -60,12 +65,14 @@
 		7090DD33DBA1A95013003759 /* SetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupView.swift; sourceTree = "<group>"; };
 		790EFEF49AC0A8FF4AB06195 /* AliveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliveButton.swift; sourceTree = "<group>"; };
 		7CDBE4DAF322F03AE988252A /* DeadYetFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeadYetFonts.swift; sourceTree = "<group>"; };
+		7EE136CBD406401510ADFA36 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		981E07FB4FB2F6A8707D9938 /* EmergencyContactTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyContactTests.swift; sourceTree = "<group>"; };
 		9896945ED27DADC572E501DB /* CheckInEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInEngineTests.swift; sourceTree = "<group>"; };
 		AC60E1ACDDAA308C11D64923 /* BackendSyncProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendSyncProtocol.swift; sourceTree = "<group>"; };
 		B15F8F3C4371F9D6CA8D0452 /* DeadYetTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = DeadYetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA1FE394955C34CC5BD60C49 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		BA95E0128FC88CC8A387800E /* GracePeriod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GracePeriod.swift; sourceTree = "<group>"; };
+		BCF6D53D277F12E026E96C94 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		C1C72151E72FD6A12934DE20 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		C8BBFF7617C8A6F353D7ACC2 /* StreakCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreakCalculator.swift; sourceTree = "<group>"; };
 		D53E7901B1AD671B3E90FC2F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -73,6 +80,17 @@
 		DDE6694A708C97A22A40F711 /* CountdownDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownDisplay.swift; sourceTree = "<group>"; };
 		E67AA942CD218D3B95B064CF /* CheckInRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInRecord.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B123056D21253999CB1A83A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BC0AC3E87D148ADB4692997 /* GoogleSignIn in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		216B583AF938B39E36C694BF /* Products */ = {
@@ -124,6 +142,7 @@
 				071148BE11BD3191BF891EA0 /* HistoryView.swift */,
 				0331A7D5B9F2E1703DEA8083 /* HomeView.swift */,
 				00657DE8292FDAE53EE7B52B /* HomeViewModel.swift */,
+				7EE136CBD406401510ADFA36 /* ProfileView.swift */,
 				D53E7901B1AD671B3E90FC2F /* SettingsView.swift */,
 				7090DD33DBA1A95013003759 /* SetupView.swift */,
 				D235984FB59AFB6D43F4AC70 /* Components */,
@@ -158,6 +177,7 @@
 			children = (
 				790EFEF49AC0A8FF4AB06195 /* AliveButton.swift */,
 				DDE6694A708C97A22A40F711 /* CountdownDisplay.swift */,
+				1E0EFF6B0BB7CFD9038F9262 /* CountryCodePicker.swift */,
 				46F4ADDCB6B8A9DC42BC62C8 /* HistoryRow.swift */,
 				561F947824102C9D27446284 /* StatusBanner.swift */,
 			);
@@ -180,6 +200,7 @@
 		E00C2A5B73C01D5CD0558DF8 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				BCF6D53D277F12E026E96C94 /* AuthenticationService.swift */,
 				AC60E1ACDDAA308C11D64923 /* BackendSyncProtocol.swift */,
 				C1C72151E72FD6A12934DE20 /* NotificationService.swift */,
 			);
@@ -230,6 +251,7 @@
 			buildConfigurationList = 9B0059897A085A38C8EB7830 /* Build configuration list for PBXNativeTarget "DeadYet" */;
 			buildPhases = (
 				306494F68404854AC9208304 /* Sources */,
+				B123056D21253999CB1A83A3 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -237,6 +259,7 @@
 			);
 			name = DeadYet;
 			packageProductDependencies = (
+				1473765983A7C62405DF6595 /* GoogleSignIn */,
 			);
 			productName = DeadYet;
 			productReference = 097C614529EE6C33550F943E /* DeadYet.app */;
@@ -265,6 +288,9 @@
 			);
 			mainGroup = 50EF8375A82670287F8F7BC5;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				6E176466D077F9EE986D95C3 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 216B583AF938B39E36C694BF /* Products */;
 			projectDirPath = "";
@@ -283,10 +309,12 @@
 			files = (
 				66B081916938F8624246A4B7 /* AliveButton.swift in Sources */,
 				DC4079FE3C94AFEF9EDE5A17 /* AppState.swift in Sources */,
+				61725F2F6E76C511AA2512D1 /* AuthenticationService.swift in Sources */,
 				1DD894E6DDB0594C5EE42DB8 /* BackendSyncProtocol.swift in Sources */,
 				6125B872F6F66B4706F1CF55 /* CheckInEngine.swift in Sources */,
 				BF723204AC5C39625ADDB794 /* CheckInRecord.swift in Sources */,
 				137192D2631A9DEC4AC8182D /* CountdownDisplay.swift in Sources */,
+				D7F9F40E9D810024C2A4AD84 /* CountryCodePicker.swift in Sources */,
 				D38B075F766157C9296FB404 /* DeadYetApp.swift in Sources */,
 				DA9C3613DD7E2B6792097E54 /* DeadYetColors.swift in Sources */,
 				8EE15301AF6D857987F4CED9 /* DeadYetFonts.swift in Sources */,
@@ -298,6 +326,7 @@
 				5B469B45924FAABE08678A60 /* HomeView.swift in Sources */,
 				48340B620D782D4A72E1BD71 /* HomeViewModel.swift in Sources */,
 				7E58E48774C70A63BC66113F /* NotificationService.swift in Sources */,
+				EC1DE3F504F11181BA00E817 /* ProfileView.swift in Sources */,
 				7E3252BEBA9D7DF056210CFB /* SettingsView.swift in Sources */,
 				961F9784CDC08A6E433F9218 /* SetupView.swift in Sources */,
 				E3C345C0F8665DAE30493E83 /* StatusBanner.swift in Sources */,
@@ -563,6 +592,25 @@
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6E176466D077F9EE986D95C3 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1473765983A7C62405DF6595 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6E176466D077F9EE986D95C3 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 916BFAB15AC346BDCE7F190A /* Project object */;
 }

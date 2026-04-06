@@ -1,11 +1,15 @@
 import SwiftUI
 import SwiftData
+import GoogleSignIn
 
 @main
 struct DeadYetApp: App {
     var body: some Scene {
         WindowGroup {
             RootView()
+                .onOpenURL { url in
+                    GIDSignIn.sharedInstance.handle(url)
+                }
         }
         .modelContainer(for: [UserSettings.self, CheckInRecord.self])
     }
@@ -32,11 +36,27 @@ struct RootView: View {
                     deadlineMinute: $deadlineMinute,
                     contactName: $contactName,
                     contactPhone: $contactPhone,
-                    onComplete: completeSetup
+                    onComplete: completeSetup,
+                    onGoogleSignIn: handleGoogleSignIn
                 )
             }
         }
         .preferredColorScheme(.dark)
+    }
+
+    private func handleGoogleSignIn(name: String?, email: String?, photoURL: URL?) {
+        let newSettings: UserSettings
+        if let existing = settings {
+            newSettings = existing
+        } else {
+            newSettings = UserSettings()
+            modelContext.insert(newSettings)
+        }
+        newSettings.displayName = name
+        newSettings.email = email
+        newSettings.profilePhotoURL = photoURL?.absoluteString
+        newSettings.authProvider = "google"
+        try? modelContext.save()
     }
 
     private func completeSetup() {

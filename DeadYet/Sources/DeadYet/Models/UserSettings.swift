@@ -10,6 +10,10 @@ final class UserSettings {
     var contactName: String?
     var contactPhone: String?
     var hasCompletedSetup: Bool
+    var displayName: String?
+    var email: String?
+    var profilePhotoURL: String?
+    var authProvider: String?
 
     init(
         deadlineHour: Int = 10,
@@ -18,7 +22,11 @@ final class UserSettings {
         reminderOffsetSeconds: Int = 3600,
         contactName: String? = nil,
         contactPhone: String? = nil,
-        hasCompletedSetup: Bool = false
+        hasCompletedSetup: Bool = false,
+        displayName: String? = nil,
+        email: String? = nil,
+        profilePhotoURL: String? = nil,
+        authProvider: String? = nil
     ) {
         self.deadlineHour = deadlineHour
         self.deadlineMinute = deadlineMinute
@@ -27,6 +35,10 @@ final class UserSettings {
         self.contactName = contactName
         self.contactPhone = contactPhone
         self.hasCompletedSetup = hasCompletedSetup
+        self.displayName = displayName
+        self.email = email
+        self.profilePhotoURL = profilePhotoURL
+        self.authProvider = authProvider
     }
 
     var emergencyContact: EmergencyContact? {

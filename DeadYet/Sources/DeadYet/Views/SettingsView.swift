@@ -77,23 +77,7 @@ struct SettingsView: View {
                                             )
                                     )
 
-                                TextField("Phone number", text: $contactPhone)
-                                    .textFieldStyle(.plain)
-                                    .font(DeadYetFonts.body(size: 16))
-                                    .foregroundStyle(DeadYetColors.primaryText)
-                                    #if os(iOS)
-                                    .keyboardType(.phonePad)
-                                    #endif
-                                    .padding(12)
-                                    .background(
-                                        RoundedRectangle(cornerRadius: 4)
-                                            .stroke(
-                                                phoneError
-                                                    ? DeadYetColors.danger
-                                                    : DeadYetColors.primaryText.opacity(0.2),
-                                                lineWidth: 1
-                                            )
-                                    )
+                                PhoneInputField(fullPhone: $contactPhone)
 
                                 if phoneError {
                                     Text("Enter a valid phone number")
